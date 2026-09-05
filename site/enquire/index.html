@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Enquire | Pip Floral Studio</title>
+<meta name="description" content="Share the essentials about your plans and the ideas you have so far. You do not need to have every detail decided.">
+<link rel="canonical" href="https://pipfloralstudio.com/enquire/">
+<meta property="og:site_name" content="Pip Floral Studio">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="Enquire | Pip Floral Studio">
+<meta property="og:description" content="Share the essentials about your plans and the ideas you have so far. You do not need to have every detail decided.">
+<meta property="og:url" content="https://pipfloralstudio.com/enquire/">
+<meta property="og:image" content="https://pipfloralstudio.com/assets/img/og/pip-floral-studio-og-default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Pip Floral Studio">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#F0EBD9">
+<link rel="stylesheet" href="/css/styles.css">
+<!-- Favicons and web app icons: not yet supplied (ASSET_REQUIREMENTS.md B3). Un-comment when the files are in place.
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/assets/icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+-->
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <!-- LOGO PLACEHOLDER: text wordmark until the approved logo SVG is supplied (ASSET_REQUIREMENTS.md B1). Do not redraw the identity. -->
+    <a class="brand" href="/" aria-label="Pip Floral Studio, home">pip <small>floral studio</small></a>
+    <button class="nav-toggle" type="button" aria-expanded="true" aria-controls="site-nav" hidden>
+      <span class="nav-toggle__icon" aria-hidden="true"></span>
+      <span>Menu</span>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <ul role="list">
+      <li><a href="/weddings/">Weddings</a></li>
+      <li><a href="/the-process/">The Process</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/other-services/">Other Services</a></li>
+      <li><a class="btn" href="/enquire/" aria-current="page">Enquire</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main" tabindex="-1">
+
+<section class="section" style="padding-top: clamp(2rem, 5vw, 4rem)">
+  <div class="wrap enquire-layout">
+    <div>
+      <fieldset class="toggle" id="enquiry-type">
+        <legend>Enquiry type</legend>
+        <div class="toggle__options">
+          <label for="type-wedding"><input type="radio" name="enquiry_route" id="type-wedding" value="wedding" checked>Wedding flowers</label>
+          <label for="type-other"><input type="radio" name="enquiry_route" id="type-other" value="other">Other flowers</label>
+        </div>
+      </fieldset>
+
+      <div id="route-wedding" style="margin-top: var(--s-7)">
+        <div class="flow prose" style="margin-bottom: var(--s-7)">
+          <h1>Tell me about your wedding.</h1>
+          <p class="lede">Share the essentials about your plans and the ideas you have so far. You do not need to have every detail decided.</p>
+          <p>I’ll read your enquiry and reply within three working days.</p>
+          <p class="small">Looking for other flowers? <a href="/other-services/">Other Services</a></p>
+        </div>
+        <form class="form" id="wedding-form" method="post" action="https://formspree.io/f/FORMSPREE_WEDDING_ID" data-form="wedding">
+  <fieldset class="step" id="w-step-you" data-step="You">
+    <legend>You</legend>
+    <div class="field">
+  <label for="w-name">Your name <span class="req">(required)</span></label>
+  
+  <input class="control" id="w-name" name="name" type="text" required aria-required="true" autocomplete="given-name" aria-describedby="w-name-error">
+  <p class="error" id="w-name-error"></p>
+</div>
+    <div class="field">
+  <label for="w-partner">Partner’s name</label>
+  
+  <input class="control" id="w-partner" name="partner_name" type="text" aria-describedby="w-partner-error">
+  <p class="error" id="w-partner-error"></p>
+</div>
+    <div class="field">
+  <label for="w-email">Email address <span class="req">(required)</span></label>
+  
+  <input class="control" id="w-email" name="email" type="email" required aria-required="true" autocomplete="email" aria-describedby="w-email-error">
+  <p class="error" id="w-email-error"></p>
+</div>
+  </fieldset>
+
+  <fieldset class="step" id="w-step-wedding" data-step="Wedding" data-reveal-after="w-step-you">
+    <legend>Your Wedding</legend>
+    <div class="field">
+      <label for="w-date">Wedding date <span class="req">(required)</span></label>
+      <input class="control" id="w-date" name="wedding_date" type="date" required aria-required="true" aria-describedby="w-date-error" data-required-unless-checked="w-date-tbc">
+      <p class="error" id="w-date-error"></p>
+      <label class="choice" for="w-date-tbc"><input type="checkbox" id="w-date-tbc" name="date_not_confirmed" value="yes" data-toggles="w-date-alt-wrap"><span>Our date is not confirmed yet</span></label>
+    </div>
+    <div class="reveal" id="w-date-alt-wrap" hidden>
+      <div class="field">
+  <label for="w-date-alt">When are you hoping to get married?</label>
+  <p class="hint" id="w-date-alt-hint">A likely season and year is enough.</p>
+  <input class="control" id="w-date-alt" name="likely_timeframe" type="text" aria-describedby="w-date-alt-hint w-date-alt-error" data-required-when-checked="w-date-tbc">
+  <p class="error" id="w-date-alt-error"></p>
+</div>
+    </div>
+
+    <div class="field">
+      <label for="w-venue">Venue <span class="req">(required)</span></label>
+      <p class="hint" id="w-venue-hint">Include the town or area if it is not clear from the venue name.</p>
+      <input class="control" id="w-venue" name="venue" type="text" required aria-required="true" aria-describedby="w-venue-hint w-venue-error" data-required-unless-checked="w-venue-tbc">
+      <p class="error" id="w-venue-error"></p>
+      <label class="choice" for="w-venue-tbc"><input type="checkbox" id="w-venue-tbc" name="venue_not_booked" value="yes" data-toggles="w-venue-alt-wrap"><span>We have not booked a venue yet</span></label>
+    </div>
+    <div class="reveal" id="w-venue-alt-wrap" hidden>
+      <div class="field">
+  <label for="w-venue-alt">Where are you considering?</label>
+  <p class="hint" id="w-venue-alt-hint">A town, county or general area is enough.</p>
+  <input class="control" id="w-venue-alt" name="likely_location" type="text" aria-describedby="w-venue-alt-hint w-venue-alt-error">
+  <p class="error" id="w-venue-alt-error"></p>
+</div>
+    </div>
+  </fieldset>
+
+  <fieldset class="step" id="w-step-flowers" data-step="Flowers" data-reveal-after="w-step-wedding">
+    <legend>Your Flowers</legend>
+    <fieldset class="field" id="w-investment" aria-describedby="w-investment-error">
+  <legend>My full wedding flower service begins at £1,500, including delivery, installation and collection. Which of these best describes your plans? <span class="req">(required)</span></legend>
+  
+  <div class="choices">
+    <label class="choice" for="w-investment-in-line"><input type="radio" id="w-investment-in-line" name="investment" value="in-line" required><span>That is in line with what we are planning.</span></label>
+    <label class="choice" for="w-investment-smaller"><input type="radio" id="w-investment-smaller" name="investment" value="smaller"><span>We are planning something smaller, local, midweek or outside the main wedding season.</span></label>
+    <label class="choice" for="w-investment-not-sure"><input type="radio" id="w-investment-not-sure" name="investment" value="not-sure"><span>We are not sure yet.</span></label>
+  </div>
+  <p class="error" id="w-investment-error"></p>
+</fieldset>
+    <p class="note reveal" id="w-note-smaller" hidden data-show-when="w-investment-smaller">Not a problem! I am happy to discuss smaller weddings and can advise whether a simpler package would suit your plans. Tell me a little more below.</p>
+    <p class="note reveal" id="w-note-not-sure" hidden data-show-when="w-investment-not-sure">You do not need to decide now. Tell me what you are planning and I’ll advise you.</p>
+
+    <div class="field">
+      <label for="w-about">Tell me about your wedding <span class="req">(required)</span></label>
+      <p class="hint" id="w-about-hint">What are you planning, and have you had any ideas so far? Any must-haves or must-nots?</p>
+      <ul class="prompts" id="w-about-prompts">
+        <li>Your colour palette or favourite flowers</li>
+        <li>Any arrangements or installations you are considering</li>
+        <li>Anything else that feels important</li>
+        <li>The atmosphere or feeling you want to create</li>
+      </ul>
+      <textarea class="control" id="w-about" name="about_your_wedding" rows="7" required aria-required="true" aria-describedby="w-about-hint w-about-prompts w-about-error"></textarea>
+      <p class="error" id="w-about-error"></p>
+    </div>
+  </fieldset>
+
+  <fieldset class="step" id="w-step-inspiration" data-step="Inspiration" data-reveal-after="w-step-flowers">
+    <legend>Inspiration</legend>
+    <p class="hint">All fields in this section are optional.</p>
+    <div class="field">
+  <label for="w-moodboard">Moodboard, Pinterest or inspiration links</label>
+  <p class="hint" id="w-moodboard-hint">Add any links or notes you would like to share.</p>
+  <textarea class="control" id="w-moodboard" name="inspiration_links" rows="4" aria-describedby="w-moodboard-hint w-moodboard-error"></textarea>
+  <p class="error" id="w-moodboard-error"></p>
+</div>
+    <fieldset class="field" id="w-source">
+      <legend>How did you hear about Pip Floral Studio?</legend>
+      <div class="choices">
+        <label class="choice" for="w-source-instagram"><input type="checkbox" id="w-source-instagram" name="heard_about" value="instagram"><span>Instagram</span></label>
+        <label class="choice" for="w-source-search"><input type="checkbox" id="w-source-search" name="heard_about" value="search"><span>Google or another search engine</span></label>
+        <label class="choice" for="w-source-friend"><input type="checkbox" id="w-source-friend" name="heard_about" value="friend-family"><span>Recommendation from a friend or family member</span></label>
+        <label class="choice" for="w-source-venue"><input type="checkbox" id="w-source-venue" name="heard_about" value="venue"><span>Venue recommendation</span></label>
+        <label class="choice" for="w-source-supplier"><input type="checkbox" id="w-source-supplier" name="heard_about" value="supplier"><span>Wedding supplier recommendation</span></label>
+        <label class="choice" for="w-source-directory"><input type="checkbox" id="w-source-directory" name="heard_about" value="directory"><span>Wedding directory</span></label>
+        <label class="choice" for="w-source-previous"><input type="checkbox" id="w-source-previous" name="heard_about" value="previous-work"><span>Previous Pip Floral Studio work</span></label>
+        <label class="choice" for="w-source-other"><input type="checkbox" id="w-source-other" name="heard_about" value="other" data-toggles="w-source-other-wrap"><span>Other</span></label>
+      </div>
+      <div class="reveal" id="w-source-other-wrap" hidden>
+        <div class="field">
+  <label for="w-source-other-text">Other</label>
+  
+  <input class="control" id="w-source-other-text" name="heard_about_other" type="text" aria-describedby="w-source-other-text-error" maxlength="120">
+  <p class="error" id="w-source-other-text-error"></p>
+</div>
+      </div>
+    </fieldset>
+    <div class="field">
+  <label for="w-access">Is there anything that would make communication or planning easier for you?</label>
+  <p class="hint" id="w-access-hint">You can share any communication or access preferences here.</p>
+  <textarea class="control" id="w-access" name="access_preferences" rows="3" aria-describedby="w-access-hint w-access-error"></textarea>
+  <p class="error" id="w-access-error"></p>
+</div>
+  </fieldset>
+
+  <div class="visually-hidden" aria-hidden="true"><label for="w-gotcha">Leave this field empty</label><input id="w-gotcha" type="text" name="_gotcha" tabindex="-1" autocomplete="off"></div>
+  <input type="hidden" name="_subject" value="Wedding enquiry">
+  <input type="hidden" name="source_page" value="/enquire/">
+  <input type="hidden" name="submitted_at" value="">
+  <div class="form-footer">
+    <button class="btn" type="submit">Send your enquiry</button>
+    <p class="consent">By sending this form, you agree that Pip Floral Studio may use the information provided to respond to your enquiry.<br><a href="/privacy/">Privacy Policy</a></p>
+  </div>
+  <div class="status" id="wedding-error-panel" role="alert" hidden tabindex="-1">
+  <h2>Your enquiry has not been sent.</h2>
+  <p>Your answers are still here. Please try again.</p>
+  <p>If the problem continues, email:<br><a href="mailto:hello@pipfloralstudio.com">hello@pipfloralstudio.com</a></p>
+  <p><button class="btn" type="button" data-retry>Try again</button></p>
+</div>
+
+  <ol class="progress progress--sticky" aria-label="Form progress" data-progress>
+    <li data-for="w-step-you" aria-current="step"><span class="tick" aria-hidden="true"></span>You<span class="visually-hidden" data-status></span></li>
+    <li data-for="w-step-wedding"><span class="tick" aria-hidden="true"></span>Wedding<span class="visually-hidden" data-status></span></li>
+    <li data-for="w-step-flowers"><span class="tick" aria-hidden="true"></span>Flowers<span class="visually-hidden" data-status></span></li>
+    <li data-for="w-step-inspiration"><span class="tick" aria-hidden="true"></span>Inspiration<span class="visually-hidden" data-status></span></li>
+  </ol>
+</form>
+<div class="status" id="wedding-form-success" role="status" hidden tabindex="-1">
+  <h2>Thank you. I’ve received your enquiry.</h2>
+  <p>I’m excited to read through your plans and will reply within three working days.</p>
+  <p>If I’m available, I’ll invite you to book a free discovery call so we can discuss the wedding and begin chatting through the flowers.</p>
+  <p>A copy of your enquiry has been sent to your email address.</p>
+  <div class="actions">
+    <a class="btn" href="/">Return home</a>
+    <a class="btn btn--secondary" href="/weddings/">Explore weddings</a>
+  </div>
+</div>
+      </div>
+
+      <div id="route-other" hidden style="margin-top: var(--s-7)">
+        <div class="flow prose" style="margin-bottom: var(--s-7)">
+          <h1>What are you planning?</h1>
+          <p class="lede">Tell me a little about the occasion, where it will take place and what you have in mind.</p>
+          <p>You do not need to have every detail decided. I’ll read your enquiry and come back to you to discuss what might be possible.</p>
+        </div>
+        <form class="form" id="other-form" method="post" action="https://formspree.io/f/FORMSPREE_OTHER_ID" data-form="other">
+  <fieldset class="step" id="o-step-you" data-step="You">
+    <legend>You</legend>
+    <div class="field">
+  <label for="o-name">Your name <span class="req">(required)</span></label>
+  
+  <input class="control" id="o-name" name="name" type="text" required aria-required="true" autocomplete="name" aria-describedby="o-name-error">
+  <p class="error" id="o-name-error"></p>
+</div>
+    <div class="field">
+  <label for="o-email">Email address <span class="req">(required)</span></label>
+  
+  <input class="control" id="o-email" name="email" type="email" required aria-required="true" autocomplete="email" aria-describedby="o-email-error" data-required-unless="o-phone" data-funeral-hint="Required unless a telephone number is supplied.">
+  <p class="error" id="o-email-error"></p>
+</div>
+    <div class="reveal" id="o-funeral-contact" hidden>
+      <div class="field">
+  <label for="o-phone">Telephone number</label>
+  <p class="hint" id="o-phone-hint">Required unless an email address is supplied.</p>
+  <input class="control" id="o-phone" name="telephone" type="tel" autocomplete="tel" aria-describedby="o-phone-hint o-phone-error" data-required-unless="o-email">
+  <p class="error" id="o-phone-error"></p>
+</div>
+      <fieldset class="field" id="o-contact" aria-describedby="o-contact-error">
+  <legend>How would you prefer me to contact you?</legend>
+  
+  <div class="choices">
+    <label class="choice" for="o-contact-email"><input type="radio" id="o-contact-email" name="contact_preference" value="email"><span>Email</span></label>
+    <label class="choice" for="o-contact-telephone"><input type="radio" id="o-contact-telephone" name="contact_preference" value="telephone"><span>Telephone</span></label>
+    <label class="choice" for="o-contact-either"><input type="radio" id="o-contact-either" name="contact_preference" value="either"><span>Either is fine</span></label>
+  </div>
+  <p class="error" id="o-contact-error"></p>
+</fieldset>
+    </div>
+  </fieldset>
+
+  <fieldset class="step" id="o-step-plans" data-step="Your plans" data-reveal-after="o-step-you">
+    <legend>Your plans</legend>
+    <div class="field">
+      <label for="o-type">What can I help with? <span class="req">(required)</span></label>
+      <select class="control" id="o-type" name="enquiry_type" required aria-required="true" aria-describedby="o-type-error">
+        <option value="">Please choose</option>
+        <option value="private-party">Private party</option>
+        <option value="corporate">Corporate event</option>
+        <option value="workshop">Workshop</option>
+        <option value="funeral">Funeral flowers</option>
+        <option value="something-else">Something else</option>
+      </select>
+      <p class="error" id="o-type-error"></p>
+    </div>
+
+    <div class="reveal" id="o-general" hidden>
+      <div class="form" style="gap: var(--s-5)">
+        <div class="field">
+          <label for="o-date">When is it taking place? <span class="req" id="o-date-req">(required)</span></label>
+          <input class="control" id="o-date" name="event_date" type="date" aria-describedby="o-date-error" data-required-unless-checked="o-date-tbc">
+          <p class="error" id="o-date-error"></p>
+          <label class="choice" for="o-date-tbc"><input type="checkbox" id="o-date-tbc" name="date_not_sure" value="yes"><span>I’m not sure yet</span></label>
+        </div>
+        <div class="field">
+  <label for="o-where">Where will it take place? <span class="req">(required)</span></label>
+  <p class="hint" id="o-where-hint">A venue, town or likely location is enough.</p>
+  <input class="control" id="o-where" name="location" type="text" required aria-required="true" aria-describedby="o-where-hint o-where-error">
+  <p class="error" id="o-where-error"></p>
+</div>
+        <div class="field">
+          <label for="o-plans">Tell me what you are planning <span class="req">(required)</span></label>
+          <p class="hint" id="o-plans-hint" data-hint-private-party="Tell me about the occasion, the space and the flowers you are considering." data-hint-corporate="Tell me about the event, organisation, space and any practical or brand requirements." data-hint-workshop="Tell me about the group, likely number of guests and the kind of experience you have in mind." data-hint-something-else="Share whatever you know so far."></p>
+          <textarea class="control" id="o-plans" name="plans" rows="6" aria-describedby="o-plans-hint o-plans-error"></textarea>
+          <p class="error" id="o-plans-error"></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal" id="o-funeral" hidden>
+      <div class="form" style="gap: var(--s-5)">
+        <p class="note">I’m sorry you are having to arrange this. Share whatever information you have below. You do not need to have every detail confirmed before getting in touch.</p>
+        <div class="field">
+  <label for="o-f-date">Date, if known</label>
+  
+  <input class="control" id="o-f-date" name="funeral_date" type="date" aria-describedby="o-f-date-error">
+  <p class="error" id="o-f-date-error"></p>
+</div>
+        <div class="field">
+  <label for="o-f-venue">Venue or location</label>
+  
+  <input class="control" id="o-f-venue" name="funeral_venue" type="text" aria-describedby="o-f-venue-error">
+  <p class="error" id="o-f-venue-error"></p>
+</div>
+        <div class="field">
+  <label for="o-f-director">Funeral director, if known</label>
+  
+  <input class="control" id="o-f-director" name="funeral_director" type="text" aria-describedby="o-f-director-error">
+  <p class="error" id="o-f-director-error"></p>
+</div>
+        <div class="field">
+  <label for="o-f-help">How can I help?</label>
+  <p class="hint" id="o-f-help-hint">Tell me about the flowers or arrangements you are considering, or anything you would like the flowers to reflect.</p>
+  <textarea class="control" id="o-f-help" name="how_can_i_help" rows="5" aria-describedby="o-f-help-hint o-f-help-error"></textarea>
+  <p class="error" id="o-f-help-error"></p>
+</div>
+        <div class="field">
+  <label for="o-f-meaning">Is there a garden, colour, flower or scent with personal meaning?</label>
+  
+  <textarea class="control" id="o-f-meaning" name="personal_meaning" rows="4" aria-describedby="o-f-meaning-error"></textarea>
+  <p class="error" id="o-f-meaning-error"></p>
+</div>
+        <p class="hint">You can also read more about my approach to funeral flowers.<br><a href="/funeral-flowers/">Funeral Flowers</a></p>
+      </div>
+    </div>
+  </fieldset>
+
+  <fieldset class="step" id="o-step-more" data-step="More information" data-reveal-after="o-step-plans">
+    <legend>More information</legend>
+    <div class="field">
+  <label for="o-budget">Do you have a budget in mind?</label>
+  
+  <input class="control" id="o-budget" name="budget" type="text" aria-describedby="o-budget-error" inputmode="text">
+  <p class="error" id="o-budget-error"></p>
+</div>
+    <div class="field">
+  <label for="o-brief">Do you have a brief, moodboard or reference images?</label>
+  <p class="hint" id="o-brief-hint">Add a link to anything you would like me to see.</p>
+  <input class="control" id="o-brief" name="brief_link" type="url" aria-describedby="o-brief-hint o-brief-error" placeholder="https://">
+  <p class="error" id="o-brief-error"></p>
+</div>
+    <div class="field">
+  <label for="o-else">Is there anything else I should know?</label>
+  
+  <textarea class="control" id="o-else" name="anything_else" rows="4" aria-describedby="o-else-error"></textarea>
+  <p class="error" id="o-else-error"></p>
+</div>
+    <div class="field">
+  <label for="o-access">Is there anything that would make communication or planning easier for you?</label>
+  <p class="hint" id="o-access-hint">You can share any communication or access preferences here.</p>
+  <textarea class="control" id="o-access" name="access_preferences" rows="3" aria-describedby="o-access-hint o-access-error"></textarea>
+  <p class="error" id="o-access-error"></p>
+</div>
+  </fieldset>
+
+  <div class="visually-hidden" aria-hidden="true"><label for="o-gotcha">Leave this field empty</label><input id="o-gotcha" type="text" name="_gotcha" tabindex="-1" autocomplete="off"></div>
+  <input type="hidden" name="_subject" value="Other enquiry">
+  <input type="hidden" name="source_page" value="/enquire/">
+  <input type="hidden" name="submitted_at" value="">
+  <div class="form-footer">
+    <button class="btn" type="submit">Send your enquiry</button>
+    <p class="consent">By sending this form, you agree that Pip Floral Studio may use the information provided to respond to your enquiry.<br><a href="/privacy/">Privacy Policy</a></p>
+  </div>
+  <div class="status" id="other-error-panel" role="alert" hidden tabindex="-1">
+  <h2>Your enquiry has not been sent.</h2>
+  <p>Your answers are still here. Please try again.</p>
+  <p>If the problem continues, email:<br><a href="mailto:hello@pipfloralstudio.com">hello@pipfloralstudio.com</a></p>
+  <p><button class="btn" type="button" data-retry>Try again</button></p>
+</div>
+</form>
+<div class="status" id="other-form-success" role="status" hidden tabindex="-1">
+  <h2>Thank you. I’ve received your enquiry.</h2>
+  <p>I’ll read through the details and come back to you to discuss what might be possible.</p>
+  <div class="actions"><a class="btn" href="/">Return home</a></div>
+</div>
+<div class="status" id="other-form-success-funeral" role="status" hidden tabindex="-1">
+  <h2>Thank you. I’ve received your enquiry.</h2>
+  <p>I’ll read the information you have shared and reply as quickly as I can.</p>
+  <p>If I’m unable to help because of the date, location or availability, I’ll let you know promptly.</p>
+  <div class="actions"><a class="btn" href="/">Return home</a></div>
+</div>
+      </div>
+    </div>
+    <aside aria-hidden="true">
+      <div id="aside-wedding"><figure class="ph ph--tall" data-asset="enquire-wedding-quiet" aria-hidden="true"><span class="ph__label"><b>Development placeholder</b>Image not yet supplied<br>enquire-wedding-quiet</span></figure></div>
+      <div id="aside-other" hidden><figure class="ph ph--tall" data-asset="enquire-other-neutral" aria-hidden="true"><span class="ph__label"><b>Development placeholder</b>Image not yet supplied<br>enquire-other-neutral</span></figure></div>
+    </aside>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <p class="footer-brand">Pip Floral Studio</p>
+        <p>Based in Ceredigion, West Wales.</p>
+        <p><a href="mailto:hello@pipfloralstudio.com">hello@pipfloralstudio.com</a></p>
+        <!-- INSTAGRAM URL: placeholder host until the approved profile URL is confirmed (docs/DECISIONS.md D3) -->
+        <p><a href="https://www.instagram.com/" rel="noopener" target="_blank">Instagram<span class="visually-hidden"> (opens in a new tab)</span></a></p>
+      </div>
+      <nav aria-labelledby="footer-explore">
+        <p class="footer-heading" id="footer-explore">Explore</p>
+        <ul role="list">
+          <li><a href="/weddings/">Weddings</a></li>
+          <li><a href="/the-process/">The Process</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/other-services/">Other Services</a></li>
+          <li><a href="/enquire/">Enquire</a></li>
+        </ul>
+      </nav>
+      <nav aria-labelledby="footer-additional">
+        <p class="footer-heading" id="footer-additional">Additional</p>
+        <ul role="list">
+          <li><a href="/funeral-flowers/">Funeral Flowers</a></li>
+          <li><a href="/privacy/">Privacy Policy</a></li>
+          <li><a href="/privacy/#cookies">Cookie Policy</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p>Studio not open for visitors.</p>
+      <p>&copy; Pip Floral Studio</p>
+    </div>
+  </div>
+</footer>
+<script src="/js/main.js" defer></script>
+<script src="/js/forms.js" defer></script>
+<!-- Cloudflare Web Analytics: enable in the Cloudflare dashboard and paste the beacon token below (docs/DEPLOYMENT.md). No cookies, no personal data.
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "REPLACE_WITH_CF_ANALYTICS_TOKEN"}'></script>
+-->
+</body>
+</html>

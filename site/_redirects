@@ -1,0 +1,8 @@
+# Cloudflare Pages redirects — permanent redirects from the previous site's routes.
+# Format: <from> <to> <status>. Test on a preview deployment before launch.
+/event-flowers /other-services/ 301
+/event-flowers/ /other-services/ 301
+/enquiry-form /enquire/ 301
+/enquiry-form/ /enquire/ 301
+/privacy-policy /privacy/ 301
+/privacy-policy/ /privacy/ 301

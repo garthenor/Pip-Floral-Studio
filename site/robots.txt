@@ -1,0 +1,6 @@
+# Production robots.txt. Preview deployments (*.pages.dev) are excluded from
+# indexing by the X-Robots-Tag header set in Cloudflare — see docs/DEPLOYMENT.md.
+User-agent: *
+Allow: /
+
+Sitemap: https://pipfloralstudio.com/sitemap.xml
