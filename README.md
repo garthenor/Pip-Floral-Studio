@@ -20,7 +20,7 @@ site/                      ← published output directory (Cloudflare Pages serv
   css/styles.css           all styles; brand tokens at the top
   js/main.js               navigation, current page, gentle scroll reveal
   js/forms.js              enquiry forms (progressive reveal, validation, submission)
-  assets/fonts|img|svg|icons   production assets (empty until supplied — see READMEs inside)
+  assets/fonts|img|svg|icons   fonts, logo and icons in place; photography pending (see READMEs inside)
   _redirects  _headers  robots.txt  sitemap.xml
 content/                   approved copy and photography brief — the source of truth for wording
 docs/                      build spec, brand palette, forms / deployment docs, checklist, decisions log
@@ -43,9 +43,10 @@ Clean URLs (`/weddings/`) resolve because each page is an `index.html` in its ow
 
 - **Copy**: the wording on every page must match `content/pip-floral-studio-v1-approved-copy.md` exactly. If a correction is needed, record it in `docs/DECISIONS.md` for approval rather than editing the page silently.
 - **Header and footer** are repeated in each HTML file. Change them in every page (a project-wide find and replace is the intended workflow). The current page is marked with `aria-current="page"` on its nav link.
+- **Cache-busting**: CSS and JS are linked as `styles.css?v=N`, `main.js?v=N`, `forms.js?v=N`. Bump `N` in every page (find and replace) whenever CSS or JS changes, or visitors may see a stale stylesheet.
 - **Styles**: `site/css/styles.css` is organised in numbered sections with a contents list at the top. Brand colours, type scale and spacing are CSS custom properties in section 1. The palette values must not change.
 - **Colour and contrast**: only dark green on cream (or cream on dark green) is used for text. Olive, pink and orange fall below WCAG contrast against both, so they are used purely decoratively (panels, rules, marks). Keep it that way.
-- **Fonts**: when the licensed WOFF2 files arrive, drop them in `site/assets/fonts/` and un-comment the `@font-face` block in section 2 of the stylesheet.
+- **Fonts**: self-hosted WOFF2 in `site/assets/fonts/`; `@font-face` rules in section 2 of the stylesheet. See the README in that folder.
 
 ### Adding photography
 
