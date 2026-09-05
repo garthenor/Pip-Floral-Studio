@@ -1,6 +1,6 @@
 # Pip Floral Studio website — asset requirements
 
-Status: V1 build complete with development placeholders. **No production assets have been supplied yet.**
+Status: V1 build complete with development placeholders. **Logo, icon and fonts supplied (5 Sept); social image and all photography still outstanding.**
 
 This list is written for Anna. It says exactly what the finished website needs, where each item goes, and what shape it should be. It was produced by reconciling the photography brief against the pages as actually built, so the counts below are what the templates hold — not a wish list.
 
@@ -14,7 +14,7 @@ Nothing has been substituted: no stock images, no generated artwork, no redrawn 
 
 | Group | Launch-critical | Optional / enhancement |
 |---|---|---|
-| Brand (logo, favicons, fonts, social image) | 4 items | 1 |
+| Brand (logo, favicons, fonts, social image) | 1 remaining (social image) | 1 |
 | Home photography | 5 | 3 |
 | Weddings photography | 14 | 4 |
 | The Process photography | 3 | 3 |
@@ -24,7 +24,7 @@ Nothing has been substituted: no stock images, no generated artwork, no redrawn 
 | Enquire photography | 0 | 2 |
 | Floral SVG elements | 0 | 3–5 |
 
-**Minimum to launch: 29 photograph slots plus the 4 brand items.** That sits inside the brief's 25–35 image estimate. Several photographs can be reused in more than one place (see "Reuse" notes), which brings the distinct count down further — realistically **20–24 distinct photographs** will fill the whole site.
+**Minimum to launch: 29 photograph slots plus the social sharing image.** That sits inside the brief's 25–35 image estimate. Several photographs can be reused in more than one place (see "Reuse" notes), which brings the distinct count down further — realistically **20–24 distinct photographs** will fill the whole site.
 
 ---
 
@@ -50,10 +50,10 @@ A one-line-per-image list (filename · wedding/event · venue · photographer ·
 
 | ID | Item | Purpose and placement | Format | Notes |
 |---|---|---|---|---|
-| **B1** | Logo — primary | Header on every page (links to Home). Currently a text stand-in reading "pip floral studio". | SVG (vector), dark green `#475445` on transparent | The tulip line drawing and "pip floral studio" wordmark from the palette artwork. Also supply a **cream version** for the dark green footer if one exists. Please do not send a JPEG/PNG only — the header needs a vector to stay crisp. |
-| **B2** | Logo — mark only | Favicon source; possible use as a small decorative mark | SVG | The tulip on its own, if it exists as a separate file. |
-| **B3** | Favicons and app icons | Browser tab icon, phone home-screen icon | Generated from B2 by the build: `favicon.ico`, `icon.svg`, `apple-touch-icon.png` (180×180), `icon-192.png`, `icon-512.png` | Nothing needed from you beyond B2. Currently no favicon is set. |
-| **B4** | Fonts — Recoleta (Medium or Regular) and Rubik (variable, or Regular + Medium + Italic) | All headings (Recoleta); all body text, navigation, labels and buttons (Rubik) | WOFF2 (web font files) | Must be **licensed for self-hosted web use**. Recoleta is a commercial typeface: check the licence bought covers web embedding for this domain. Rubik is open-source (SIL OFL) and can be downloaded freely. Until supplied, the site uses similar system fonts. |
+| **B1** | Logo — primary | **SUPPLIED 5 Sept** (`Pip Floral Studio RGB.svg`, in use as `site/assets/svg/logo.svg`). Header on every page. | SVG | The tulip line drawing and "pip floral studio" wordmark from the palette artwork. Also supply a **cream version** for the dark green footer if one exists. Please do not send a JPEG/PNG only — the header needs a vector to stay crisp. |
+| **B2** | Logo — mark only | **SUPPLIED 5 Sept** (`Pip Floral Studio Icon.svg`). Used for favicons. | SVG | — |
+| **B3** | Favicons and app icons | Browser tab icon, phone home-screen icon | Generated from B2 by the build: `favicon.ico`, `icon.svg`, `apple-touch-icon.png` (180×180), `icon-192.png`, `icon-512.png` | **DONE** — generated from B2. |
+| **B4** | Fonts | **SUPPLIED 5 Sept** — converted to WOFF2 and live: Recoleta Regular; Rubik Regular, Medium, Italic. | WOFF2 | Still to confirm: the Recoleta licence covers self-hosted web embedding for the production domain (commercial typeface). Rubik is SIL OFL. |
 | **B5** | Social sharing image | Shown when a page is shared on Instagram, WhatsApp, Facebook, iMessage | JPEG, exactly 1200×630, under 300 KB | One strong, wide wedding image with no text on it — it can be a crop of the homepage hero. Filename: `pip-floral-studio-og-default.jpg`. |
 
 Optional: **B6** — a cream-on-green logo lock-up for the footer (if not covered in B1).

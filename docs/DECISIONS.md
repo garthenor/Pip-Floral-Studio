@@ -42,6 +42,9 @@ Home (F&T), Weddings (J&A, E&S, C&B) and About (unattributed quote) testimonials
 **D12 — Privacy page legal review. OPEN (from the copy's own TODO).**
 Published as approved; requires the pre-launch legal check and a live-cookie check against the deployed site (see PRELAUNCH_CHECKLIST.md).
 
+**D13 — Additional investment note. APPROVED (Jonny, 5 Sept 2026).**
+A third contextual note was added to the wedding form for the "That is in line with what we are planning." option: "Great, thank you! Tell me a little more about your wedding and what you have in mind below." Not in the original copy document; add it there when next revised.
+
 ## Decisions taken in the build (for information)
 
 - **Published output directory is `site/`**, with `content/` and `docs/` alongside in the repo. Keeps source documents versioned without publishing them.
@@ -49,12 +52,13 @@ Published as approved; requires the pre-launch legal check and a live-cookie che
 - **Accent colours are decorative only.** Olive, pink and orange measure 2.3–2.9:1 against cream and green, below WCAG AA for text and UI boundaries. They appear as colour panels behind images, the footer band and stage markers. Text is always green on cream or cream on green (6.7:1).
 - **Fonts**: `@font-face` rules are present but commented out until licensed files arrive; fallback stacks are Iowan Old Style/Palatino/Georgia and system sans-serif.
 - **Placeholders** are grey hatched `<figure>`s labelled "Development placeholder" with the asset ID, `aria-hidden="true"`. They cannot be mistaken for approved imagery.
-- **Logo** is a text stand-in ("pip floral studio") pending the SVG. The identity was not redrawn.
+- **Logo** (supplied 5 Sept): stacked tulip + wordmark lock-up used in the header at ~60px tall, viewBox cropped to the artwork; fill set to palette green `#475445` (source file used `#485445`). At header size the "floral studio" line is very small — a horizontal lock-up, if one exists, would read better. Favicons and web-app icons generated from the icon SVG. Originals kept in `docs/brand/`.
 - **Enquire page headings**: each route has its own `<h1>` ("Tell me about your wedding." / "What are you planning?"); only the active route is in the DOM's rendered tree. Without JavaScript both routes and both forms are shown, stacked.
 - **Enquire-page images** are hidden below 64em so they never compete with the form on phones.
 - **Weddings testimonials** have no paired photographs (no confirmed image–couple relationship).
 - **Structured data** (Home): `Florist` with name, URL, email, founder Anna Lambert, founding year 2021, locality Tregaron / Ceredigion, area served. All facts come from the approved copy. No opening hours, phone, street address, prices or ratings.
 - **Session storage** is written only after a failed submission, cleared on success — matching the Privacy page.
+- **Design tweaks after first deploy (5 Sept 2026)**: 16px corner radius site-wide; header Enquire button is outline style (filled when current); wedding-form progress indicator sticky at all viewport sizes.
 - **Query strings** use the trailing-slash form `/enquire/?type=…` (spec) rather than `/enquire?type=…` (copy); Cloudflare Pages normalises to the trailing slash anyway.
 
 ## Deferred to V2 (record only)

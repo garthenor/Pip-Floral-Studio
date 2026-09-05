@@ -16,7 +16,8 @@ Tick every line before switching the custom domain to production.
 - [ ] Photographer permissions and credits recorded; credits shown where required
 - [ ] Funeral images checked: no identifiable people, cards or messages without agreement
 - [ ] Logo SVG in header (and cream variant in footer if supplied); favicons and `site.webmanifest` in place, `<link>` tags un-commented
-- [ ] Fonts: licensed WOFF2 files in `site/assets/fonts/`, `@font-face` un-commented, no third-party font requests (check Network tab)
+- [x] Fonts: WOFF2 files in `site/assets/fonts/`, `@font-face` active, no third-party font requests
+- [ ] Recoleta licence confirmed to cover self-hosted web use on the production domain
 - [ ] Social image `assets/img/og/pip-floral-studio-og-default.jpg` at 1200×630; test a share preview
 - [ ] Images: responsive `srcset`/`sizes`, `width`/`height` set, lazy-loaded below the fold, heroes not lazy; largest page under ~1.5 MB on first load
 
