@@ -50,7 +50,7 @@ A one-line-per-image list (filename · wedding/event · venue · photographer ·
 
 | ID | Item | Purpose and placement | Format | Notes |
 |---|---|---|---|---|
-| **B1** | Logo — primary | **SUPPLIED 5 Sept** (`Pip Floral Studio RGB.svg`, in use as `site/assets/svg/logo.svg`). Header on every page. | SVG | The tulip line drawing and "pip floral studio" wordmark from the palette artwork. Also supply a **cream version** for the dark green footer if one exists. Please do not send a JPEG/PNG only — the header needs a vector to stay crisp. |
+| **B1** | Logo — primary | **SUPPLIED 5 Sept** (`Pip Floral Studio RGB.svg` → `site/assets/svg/logo.svg`; `Pip Floral Horizontal.svg` → `logo-horizontal.svg`, used in the header). | SVG | The tulip line drawing and "pip floral studio" wordmark from the palette artwork. Also supply a **cream version** for the dark green footer if one exists. Please do not send a JPEG/PNG only — the header needs a vector to stay crisp. |
 | **B2** | Logo — mark only | **SUPPLIED 5 Sept** (`Pip Floral Studio Icon.svg`). Used for favicons. | SVG | — |
 | **B3** | Favicons and app icons | Browser tab icon, phone home-screen icon | Generated from B2 by the build: `favicon.ico`, `icon.svg`, `apple-touch-icon.png` (180×180), `icon-192.png`, `icon-512.png` | **DONE** — generated from B2. |
 | **B4** | Fonts | **SUPPLIED 5 Sept** — converted to WOFF2 and live: Recoleta Regular; Rubik Regular, Medium, Italic. | WOFF2 | Still to confirm: the Recoleta licence covers self-hosted web embedding for the production domain (commercial typeface). Rubik is SIL OFL. |

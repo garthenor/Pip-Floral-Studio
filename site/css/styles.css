@@ -69,7 +69,7 @@
   --narrow: 44rem;
 
   --radius: 16px;
-  --header-h: 4.75rem;
+  --header-h: 4.5rem;
 }
 
 /* 2. Fonts ----------------------------------------------------------------
@@ -241,8 +241,8 @@ em { font-style: italic; }
   gap: var(--s-4);
 }
 .brand { display: inline-flex; align-items: center; padding-block: var(--s-2); }
-.brand img { height: 3.25rem; width: auto; }
-@media (min-width: 56em) { .brand img { height: 3.75rem; } }
+.brand img { height: 2.5rem; width: auto; }
+@media (min-width: 56em) { .brand img { height: 2.875rem; } }
 .nav-toggle {
   display: inline-flex;
   align-items: center;
@@ -370,11 +370,11 @@ em { font-style: italic; }
   text-align: center;
   transition: background-color 160ms ease, color 160ms ease;
 }
-.btn:hover { background: color-mix(in srgb, var(--green) 88%, black); border-color: color-mix(in srgb, var(--green) 88%, black); }
+.btn:hover { background: transparent; color: var(--green); }
 .btn--secondary { background: transparent; color: var(--green); }
 .btn--secondary:hover { background: var(--green); color: var(--cream); }
 .section--inverse .btn { background: var(--cream); color: var(--green); border-color: var(--cream); }
-.section--inverse .btn:hover { background: color-mix(in srgb, var(--cream) 90%, white); }
+.section--inverse .btn:hover { background: transparent; color: var(--cream); }
 .section--inverse .btn--secondary { background: transparent; color: var(--cream); }
 .section--inverse .btn--secondary:hover { background: var(--cream); color: var(--green); }
 .btn[disabled], .btn[aria-disabled="true"] { opacity: 0.6; cursor: progress; }
