@@ -34,7 +34,7 @@ The copy specifies the rule ("Required: Yes, unless a telephone number is suppli
 The copy provides a submission-error block and validation messages only under the wedding form. They are generic, so the same texts are used on all three forms. Confirm that is acceptable.
 
 **D10 — Wedding autoresponse. OPEN.**
-The wedding success copy states "A copy of your enquiry has been sent to your email address." This depends on Formspree's Autoresponse feature (paid plan). Confirm the plan, or the sentence needs revisiting.
+The wedding success copy states "A copy of your enquiry has been sent to your email address." This depends on Formspree's Autoresponse feature (paid plan). Confirm the plan, or the sentence needs revisiting. (Status 6 Sept 2026: the three Formspree endpoints are live and wired into the forms; domain restriction, notification email and this autoresponse decision are still outstanding in the Formspree dashboard.)
 
 **D11 — Testimonial permissions. OPEN (from the copy's own TODOs).**
 Home (F&T), Weddings (J&A, E&S, C&B) and About (unattributed quote) testimonials are published as supplied; the copy document flags that wording, attribution and permission still need confirming.

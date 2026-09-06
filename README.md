@@ -88,8 +88,7 @@ Place Anna's SVGs in `site/assets/svg/`. Inline them or use `<img alt="">`, add 
 
 ## Forms
 
-See `docs/FORMS.md`. Three Formspree endpoint placeholders need replacing before the forms will send:
-`FORMSPREE_WEDDING_ID`, `FORMSPREE_OTHER_ID` (both in `site/enquire/index.html`) and `FORMSPREE_FUNERAL_ID` (in `site/funeral-flowers/index.html`).
+See `docs/FORMS.md`. The three Formspree endpoints are live (wired in 6 Sept 2026): `xljewlre` and `xyeydpzg` in `site/enquire/index.html`, `xeaqlzoo` in `site/funeral-flowers/index.html`. Remaining setup (domain restriction, notification email, wedding autoresponse) is tracked in `docs/PRELAUNCH_CHECKLIST.md`.
 
 ## Deployment
 

@@ -1,24 +1,24 @@
 # Forms — configuration and behaviour
 
-Four forms, three Formspree endpoints:
+Four forms, three Formspree endpoints. **Live as of 6 Sept 2026** — real endpoint IDs are wired in:
 
-| Form | Page | Formspree placeholder to replace | Success message shown |
+| Form | Page | Formspree endpoint | Success message shown |
 |---|---|---|---|
-| Wedding enquiry | `/enquire/` (default view) | `FORMSPREE_WEDDING_ID` in `site/enquire/index.html` | Wedding success (includes "A copy of your enquiry has been sent…") |
-| Other enquiry | `/enquire/` → Other flowers | `FORMSPREE_OTHER_ID` in `site/enquire/index.html` | General success, or the funeral variant when "Funeral flowers" is chosen |
+| Wedding enquiry | `/enquire/` (default view) | `xljewlre` — `site/enquire/index.html` | Wedding success (includes "A copy of your enquiry has been sent…") |
+| Other enquiry | `/enquire/` → Other flowers | `xyeydpzg` — `site/enquire/index.html` | General success, or the funeral variant when "Funeral flowers" is chosen |
 | Funeral Flowers variant | `/enquire/` → Other flowers → Funeral flowers | same endpoint as Other enquiry | Funeral success |
-| Funeral Flowers enquiry | `/funeral-flowers/` | `FORMSPREE_FUNERAL_ID` in `site/funeral-flowers/index.html` | Funeral page success |
+| Funeral Flowers enquiry | `/funeral-flowers/` | `xeaqlzoo` — `site/funeral-flowers/index.html` | Funeral page success |
 
-A Formspree form ID is public configuration, not a secret. It lives in the `action` attribute of each `<form>` so the form also works with JavaScript disabled. Search the two files for `FORMSPREE_` and replace with the real IDs (e.g. `https://formspree.io/f/abcdwxyz`).
+A Formspree form ID is public configuration, not a secret. It lives in the `action` attribute of each `<form>` so the form also works with JavaScript disabled.
 
-Until the IDs are replaced, submitting shows the approved "temporarily unavailable" message and keeps the answers.
+Still to do in the Formspree dashboard before launch (see checklist below): notification email, domain restriction, spam-protection check, and the wedding autoresponse decision (D10).
 
 ## Formspree account setup (per form)
 
-1. Create three forms in Formspree named **Wedding enquiry**, **Other enquiry**, **Funeral flowers enquiry**.
+1. ~~Create three forms in Formspree named **Wedding enquiry**, **Other enquiry**, **Funeral flowers enquiry**.~~ Done (6 Sept 2026).
 2. Set the notification email to Anna's Google Workspace address. Verify it.
 3. **Spam protection**: leave Formspree's defaults on (honeypot is already in the markup as `_gotcha`). Do not enable reCAPTCHA unless real spam appears.
-4. **Wedding form only** — autoresponder: enable Formspree's *Autoresponse* (Plugins → Autoresponse), sending to the `email` field. The approved success copy tells the enquirer a copy has been sent, so this must be on before launch, or that sentence must be reviewed. Autoresponse is a paid-plan feature on Formspree — confirm the plan.
+4. **Wedding form only** — autoresponder: enable Formspree's *Autoresponse* (Plugins → Autoresponse), sending to the `email` field. The approved success copy tells the enquirer a copy has been sent, so this must be on before launch, or that sentence must be reviewed. Autoresponse is a paid-plan feature on Formspree — confirm the plan (see D10 in `DECISIONS.md`).
 5. Allowed domains: restrict each form to the production domain (and the `*.pages.dev` preview domain while testing).
 6. Optional: turn on Formspree's *Submission archive* so entries are retained in the dashboard (the Privacy page says they are).
 
