@@ -23,8 +23,9 @@ Tick every line before switching the custom domain to production.
 
 ## Forms
 - [x] Three Formspree IDs replaced (6 Sept 2026)
-- [ ] Forms restricted to the production domain (and `*.pages.dev` while testing)
+- [x] Spam protection confirmed on (Formshield) for all three forms (6 Sept 2026)
 - [x] Notification email set and verified in Formspree for all three forms (6 Sept 2026)
+- [ ] First real submission on each form comes from the production (or current preview) domain only — free-plan Formspree locks a form to whichever origin submits first
 - [ ] Test submission from each form on the preview deployment reaches Anna's inbox with the correct subject format
 - [ ] Failure path tested: answers retained, error panel shown, reload restores answers, success clears storage
 - [ ] Duplicate submission prevented while sending (button disabled)

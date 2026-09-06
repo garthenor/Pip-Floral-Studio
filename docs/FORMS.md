@@ -11,16 +11,16 @@ Four forms, three Formspree endpoints. **Live as of 6 Sept 2026** — real endpo
 
 A Formspree form ID is public configuration, not a secret. It lives in the `action` attribute of each `<form>` so the form also works with JavaScript disabled.
 
-Still to do in the Formspree dashboard before launch (see checklist below): domain restriction and a spam-protection check. Notification email is set and verified; the wedding autoresponse question (D10) is resolved — not enabled, free plan.
+Still to do before launch (see checklist below): a real test submission on each form. Notification email, spam protection and the wedding autoresponse question (D10) are all resolved.
 
 ## Formspree account setup (per form)
 
 1. ~~Create three forms in Formspree named **Wedding enquiry**, **Other enquiry**, **Funeral flowers enquiry**.~~ Done (6 Sept 2026).
 2. ~~Set the notification email to Anna's Google Workspace address. Verify it.~~ Done (6 Sept 2026).
-3. **Spam protection**: leave Formspree's defaults on (honeypot is already in the markup as `_gotcha`). Do not enable reCAPTCHA unless real spam appears.
+3. ~~**Spam protection**~~. Formshield (Formspree's built-in ML spam filter) is on by default; CAPTCHA is off, which is fine alongside the honeypot field already in the markup (`_gotcha`). Confirmed 6 Sept 2026 — no change needed.
 4. ~~**Wedding form only** — autoresponder~~. The account is on Formspree's free plan, which doesn't include Autoresponse, so this is not enabled. The wedding success panel no longer promises an emailed copy of the enquiry (see D10 in `DECISIONS.md`).
-5. Allowed domains: restrict each form to the production domain (and the `*.pages.dev` preview domain while testing).
-6. Optional: turn on Formspree's *Submission archive* so entries are retained in the dashboard (the Privacy page says they are).
+5. **Domain restriction**: the free plan has no manual allowed-domains field — Formspree instead locks a form to whatever domain first submits to it successfully. In practice this means: don't test-submit from anywhere except the production domain (or the `*.pages.dev` preview while that's still the live URL), or the form may lock to the wrong origin. If a lock ever needs resetting, contact Formspree support.
+6. Optional: turn on Formspree's *Submission archive* so entries are retained in the dashboard (the Privacy page says they are) — already on by default.
 
 ## What Anna receives
 
