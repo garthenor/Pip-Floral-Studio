@@ -4,21 +4,21 @@ Four forms, three Formspree endpoints. **Live as of 6 Sept 2026** — real endpo
 
 | Form | Page | Formspree endpoint | Success message shown |
 |---|---|---|---|
-| Wedding enquiry | `/enquire/` (default view) | `xljewlre` — `site/enquire/index.html` | Wedding success (includes "A copy of your enquiry has been sent…") |
+| Wedding enquiry | `/enquire/` (default view) | `xljewlre` — `site/enquire/index.html` | Wedding success |
 | Other enquiry | `/enquire/` → Other flowers | `xyeydpzg` — `site/enquire/index.html` | General success, or the funeral variant when "Funeral flowers" is chosen |
 | Funeral Flowers variant | `/enquire/` → Other flowers → Funeral flowers | same endpoint as Other enquiry | Funeral success |
 | Funeral Flowers enquiry | `/funeral-flowers/` | `xeaqlzoo` — `site/funeral-flowers/index.html` | Funeral page success |
 
 A Formspree form ID is public configuration, not a secret. It lives in the `action` attribute of each `<form>` so the form also works with JavaScript disabled.
 
-Still to do in the Formspree dashboard before launch (see checklist below): notification email, domain restriction, spam-protection check, and the wedding autoresponse decision (D10).
+Still to do in the Formspree dashboard before launch (see checklist below): domain restriction and a spam-protection check. Notification email is set and verified; the wedding autoresponse question (D10) is resolved — not enabled, free plan.
 
 ## Formspree account setup (per form)
 
 1. ~~Create three forms in Formspree named **Wedding enquiry**, **Other enquiry**, **Funeral flowers enquiry**.~~ Done (6 Sept 2026).
-2. Set the notification email to Anna's Google Workspace address. Verify it.
+2. ~~Set the notification email to Anna's Google Workspace address. Verify it.~~ Done (6 Sept 2026).
 3. **Spam protection**: leave Formspree's defaults on (honeypot is already in the markup as `_gotcha`). Do not enable reCAPTCHA unless real spam appears.
-4. **Wedding form only** — autoresponder: enable Formspree's *Autoresponse* (Plugins → Autoresponse), sending to the `email` field. The approved success copy tells the enquirer a copy has been sent, so this must be on before launch, or that sentence must be reviewed. Autoresponse is a paid-plan feature on Formspree — confirm the plan (see D10 in `DECISIONS.md`).
+4. ~~**Wedding form only** — autoresponder~~. The account is on Formspree's free plan, which doesn't include Autoresponse, so this is not enabled. The wedding success panel no longer promises an emailed copy of the enquiry (see D10 in `DECISIONS.md`).
 5. Allowed domains: restrict each form to the production domain (and the `*.pages.dev` preview domain while testing).
 6. Optional: turn on Formspree's *Submission archive* so entries are retained in the dashboard (the Privacy page says they are).
 
@@ -58,6 +58,6 @@ Hidden/not-applicable fields are stripped before sending so Anna only sees what 
 - Wedding: tick "date not confirmed" → timeframe required; untick → date required again.
 - Other → Funeral flowers with telephone only (no email) → no email error.
 - Simulate failure (temporarily break the endpoint) → error panel, reload, answers restored.
-- Real submission on the preview deployment → arrives in Anna's inbox with the right subject; wedding autoresponse arrives at the test address.
+- Real submission on the preview deployment → arrives in Anna's inbox with the right subject.
 - Check Formspree's dashboard shows `submitted_at` and `source_page`.
 - Keyboard-only run through each form; screen reader run (VoiceOver/NVDA) through the wedding form including the progress indicator.

@@ -24,9 +24,8 @@ Tick every line before switching the custom domain to production.
 ## Forms
 - [x] Three Formspree IDs replaced (6 Sept 2026)
 - [ ] Forms restricted to the production domain (and `*.pages.dev` while testing)
-- [ ] Notification email set and verified in Formspree for all three forms
+- [x] Notification email set and verified in Formspree for all three forms (6 Sept 2026)
 - [ ] Test submission from each form on the preview deployment reaches Anna's inbox with the correct subject format
-- [ ] Wedding autoresponse arrives at the enquirer's address (D10)
 - [ ] Failure path tested: answers retained, error panel shown, reload restores answers, success clears storage
 - [ ] Duplicate submission prevented while sending (button disabled)
 - [ ] Keyboard-only completion of all three forms
