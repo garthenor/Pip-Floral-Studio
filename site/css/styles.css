@@ -391,6 +391,13 @@ em { font-style: italic; }
 }
 .hero__note { margin-top: var(--s-5); font-size: var(--step--1); }
 .hero--quiet .hero__grid { grid-template-columns: 1fr; }
+
+/* Hero variant for a portrait (rather than landscape) hero image: gives the
+   image column less width so a tall image doesn't dwarf the text column. */
+@media (min-width: 56em) {
+  .hero__grid--portrait { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); }
+}
+.hero__grid--portrait .panel { max-width: 26rem; margin-inline-start: auto; }
 .hero--quiet h1 { font-size: var(--step-4); }
 
 /* Full-bleed photograph band */
