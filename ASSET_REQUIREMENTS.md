@@ -100,6 +100,20 @@ Legend — **Crit.** = launch-critical. **Mobile crop** = a portrait companion v
 | `weddings-anna-working` | Optional | "I'm Anna" | Anna working, installing or carrying flowers — not the main portrait | Portrait, 4:5 | 1200 × 1500 | No | Yes | → `about-anna-making` |
 | `weddings-process-support` | Optional | "From enquiry to wedding day" | Preparation, mechanics, buckets of conditioned flowers, loading, or a finished design being checked | Portrait, 3:4 | 1200 × 1600 | No | Yes | → any Process image |
 
+**"A few more moments" gallery** — added after the original gallery to cover subjects not otherwise represented (cake, buttonholes, confetti, stationery):
+
+| ID | Crit. | Placement | Subject | Orientation / ratio | Min. size | Mobile crop | Alt text | Reuse |
+|---|---|---|---|---|---|---|---|---|
+| `weddings-gallery-8-buttonhole` | Optional | "A few more moments" gallery | Buttonhole being applied | Portrait, 2:3 | 1067 × 1600 | No | Yes | — |
+| `weddings-gallery-9-cake` | Optional | Gallery | Wedding cake with flowers | Landscape, 3:2 | 1600 × 1067 | No | Yes | — |
+| `weddings-gallery-10-confetti-bowls` | Optional | Gallery | Bowls of confetti ready for guests | Portrait, 2:3 | 1200 × 1800 | No | Yes | — |
+| `weddings-gallery-11-aisle-meadow` | Optional | Gallery | Aisle meadow / pew-end flowers | Portrait, 2:3 | 1200 × 1800 | No | Yes | — |
+| `weddings-gallery-12-seating-plan` | Optional | Gallery | Seating plan with flowers at base | Portrait, 2:3 | 1200 × 1800 | No | Yes | — |
+| `weddings-gallery-13-table-flowers` | Optional | Gallery | Table flowers, close view | Landscape, 3:2 | 1600 × 1067 | No | Yes | — |
+| `weddings-gallery-14-bouquets-delivered` | Optional | Gallery | Bouquets delivered to the bride | Portrait, 3:4 | 1200 × 1600 | No | Yes | — |
+| `weddings-gallery-15-installation-detail` | Optional | Gallery | A second installation example | Portrait, 2:3 | 1067 × 1600 | No | Yes | — |
+| `weddings-confetti-moment` | Optional | Full-width band closing the gallery | Confetti thrown over the couple | Landscape, 3:2 | 1600 × 1067 | Yes | Yes | — |
+
 Testimonials on this page deliberately have **no photographs beside them**, because no image has been confirmed as belonging to a quoted couple. If a photo from J&A, E&S or C&B's wedding is available with permission, say so and it can be paired.
 
 ### The Process (`/the-process/`)
