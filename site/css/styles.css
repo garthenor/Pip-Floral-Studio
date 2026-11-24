@@ -60,8 +60,8 @@
   --s-6: 2rem;
   --s-7: 3rem;
   --s-8: 4rem;
-  --section: clamp(3.5rem, 6vw + 1rem, 7rem);
-  --gutter:  clamp(1.25rem, 4vw, 3rem);
+  --section: clamp(4.5rem, 8vw + 1rem, 9rem);
+  --gutter:  clamp(1.5rem, 5vw, 4rem);
 
   /* Measure and widths */
   --measure: 62ch;
@@ -119,7 +119,7 @@ body {
   color: var(--fg);
   font-family: var(--font-body);
   font-size: var(--step-0);
-  line-height: 1.6;
+  line-height: 1.7;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -185,10 +185,10 @@ a:hover { text-decoration-thickness: 2px; }
 strong { font-weight: 500; }
 em { font-style: italic; }
 
-.flow > * + * { margin-top: var(--flow, 1em); }
-.flow > h2 + *, .flow > h3 + * { margin-top: var(--s-4); }
-.flow > * + h2 { margin-top: var(--s-7); }
-.flow > * + h3 { margin-top: var(--s-6); }
+.flow > * + * { margin-top: var(--flow, 1.15em); }
+.flow > h2 + *, .flow > h3 + * { margin-top: var(--s-5); }
+.flow > * + h2 { margin-top: var(--s-8); }
+.flow > * + h3 { margin-top: var(--s-7); }
 
 /* 5. Layout primitives --------------------------------------------------- */
 .wrap {
@@ -216,11 +216,11 @@ em { font-style: italic; }
 /* Split: text beside image. Alternates direction with .split--flip. */
 .split {
   display: grid;
-  gap: var(--s-6);
+  gap: var(--s-7);
   align-items: center;
 }
 @media (min-width: 56em) {
-  .split { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(2rem, 6vw, 6rem); }
+  .split { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(3rem, 7vw, 7.5rem); }
   .split--flip > :first-child { order: 2; }
   .split--even { grid-template-columns: 1fr 1fr; }
 }
@@ -378,14 +378,14 @@ em { font-style: italic; }
 .section--inverse .btn--secondary { background: transparent; color: var(--cream); }
 .section--inverse .btn--secondary:hover { background: var(--cream); color: var(--green); }
 .btn[disabled], .btn[aria-disabled="true"] { opacity: 0.6; cursor: progress; }
-.actions { display: flex; flex-wrap: wrap; gap: var(--s-3) var(--s-4); margin-top: var(--s-5); }
+.actions { display: flex; flex-wrap: wrap; gap: var(--s-3) var(--s-4); margin-top: var(--s-6); }
 .link-more { font-weight: 500; }
 
 /* 9. Sections and patterns ---------------------------------------------- */
 
 /* Hero: text then image on mobile; text beside image on larger screens */
 .hero { padding-block: clamp(2.5rem, 6vw, 5rem) var(--section); }
-.hero__grid { display: grid; gap: var(--s-6); align-items: end; }
+.hero__grid { display: grid; gap: var(--s-7); align-items: end; }
 @media (min-width: 56em) {
   .hero__grid { grid-template-columns: minmax(0, 6fr) minmax(0, 7fr); gap: clamp(2rem, 5vw, 5rem); }
 }
@@ -397,7 +397,13 @@ em { font-style: italic; }
 @media (min-width: 56em) {
   .hero__grid--portrait { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); }
 }
-.hero__grid--portrait .panel { max-width: 26rem; margin-inline-start: auto; }
+.hero__grid--portrait .panel { max-width: 26rem; }
+@media (min-width: 56em) {
+  .hero__grid--portrait .panel { margin-inline-start: auto; }
+}
+/* Space between the hero headline and its intro line (matches the pages
+   whose hero text column uses .flow) */
+.hero h1 + .lede { margin-top: 1em; }
 .hero--quiet h1 { font-size: var(--step-4); }
 
 /* Full-bleed photograph band */
@@ -419,7 +425,7 @@ em { font-style: italic; }
   .gallery > .span-4 { grid-column: span 4; }
   .gallery > .span-6 { grid-column: span 6; }
 }
-.gallery figcaption, .credit { font-size: var(--step--1); margin-top: var(--s-2); }
+.gallery figcaption:not(.credit) { font-size: var(--step--1); margin-top: var(--s-2); }
 
 /* Numbered steps (home How it works, About three things) */
 .steps { display: grid; gap: var(--s-6); counter-reset: step; }
@@ -468,14 +474,14 @@ em { font-style: italic; }
 .stage__body h2 { font-size: var(--step-3); }
 
 /* Service list (Weddings: Flowers throughout your wedding) */
-.services { display: grid; gap: var(--s-6); }
+.services { display: grid; gap: var(--s-8) var(--s-6); }
 @media (min-width: 48em) { .services { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (min-width: 72em) { .services { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 .service { display: grid; gap: var(--s-4); align-content: start; }
-.service h3 { margin-top: var(--s-2); }
+.service h3 { margin-top: var(--s-4); }
 
 /* Testimonials */
-.testimonials { display: grid; gap: var(--s-6); }
+.testimonials { display: grid; gap: var(--s-7); }
 @media (min-width: 56em) { .testimonials { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 .testimonial {
   display: grid;
@@ -505,7 +511,6 @@ em { font-style: italic; }
 .panel--pink::before { background: var(--pink); }
 .panel--orange::before { background: var(--orange); }
 @media (max-width: 47.99em) { .panel::before { inset: 0.75rem -0.75rem -0.75rem 0.75rem; } }
-
 /* Call to action band */
 .cta { text-align: left; }
 .cta .wrap { display: grid; gap: var(--s-5); }
@@ -539,7 +544,7 @@ em { font-style: italic; }
 .list li + li { margin-top: var(--s-2); }
 
 /* Signpost row (e.g. Home: other services + funeral flowers) */
-.signposts { display: grid; gap: var(--s-6); }
+.signposts { display: grid; gap: var(--s-8); }
 @media (min-width: 56em) { .signposts { grid-template-columns: 3fr 2fr; gap: clamp(2rem, 6vw, 6rem); } }
 .signpost--quiet { padding-top: var(--s-5); border-top: 1px solid var(--rule); }
 @media (min-width: 56em) { .signpost--quiet { padding-top: 0; border-top: 0; padding-left: clamp(1.5rem, 3vw, 3rem); border-left: 1px solid var(--rule); } }
@@ -721,4 +726,52 @@ select.control {
 @media print {
   .site-header, .site-footer, .skip-link, .nav-toggle, .ph { display: none !important; }
   body { background: #fff; color: #000; }
+}
+
+/* 11. Review round 2 (Nov 2026) ------------------------------------------ */
+
+/* Rounded corners on every photograph, matching the accent panels */
+picture img { border-radius: var(--radius); }
+
+/* Photo credits: small white text over the bottom-left of the photograph */
+figure:has(> .credit) { position: relative; }
+.credit {
+  position: absolute;
+  left: 0.875rem;
+  bottom: 0.625rem;
+  margin: 0;
+  max-width: calc(100% - 1.75rem);
+  font-size: 9px;
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+  color: #fff;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.55), 0 1px 2px rgba(0, 0, 0, 0.45);
+  pointer-events: none;
+}
+
+/* Spacing utilities (replace inline style attributes, which the site's
+   Content-Security-Policy blocks in production) */
+.space-above { margin-top: var(--s-7); }
+.space-above-lg { margin-top: var(--s-8); }
+.space-below-lg { margin-bottom: var(--s-8); }
+.section--page-top { padding-top: clamp(2.5rem, 6vw, 5rem); }
+.form--roomy { gap: var(--s-5); }
+
+/* "A few more moments" gallery: rows of portrait / landscape / portrait,
+   all the same height on larger screens; two columns on phones */
+.moments {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-flow: dense;
+  gap: var(--s-4);
+}
+.moments__row { display: contents; }
+.moments__item--l { grid-column: span 2; }
+.moments__item img { width: 100%; aspect-ratio: 2 / 3; object-fit: cover; }
+.moments__item--l img { aspect-ratio: 3 / 2; }
+@media (min-width: 48em) {
+  .moments { grid-template-columns: minmax(0, 1fr); gap: var(--s-5); }
+  .moments__row { display: flex; gap: var(--s-5); }
+  .moments__item { flex: 2 1 0; min-width: 0; }
+  .moments__item--l { flex: 4.5 1 0; grid-column: auto; }
 }

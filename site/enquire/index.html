@@ -20,7 +20,7 @@
 <meta name="theme-color" content="#F0EBD9">
 <link rel="preload" href="/assets/fonts/recoleta-regular.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/rubik-regular.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/css/styles.css?v=6">
+<link rel="stylesheet" href="/css/styles.css?v=7">
 <link rel="icon" href="/favicon.ico" sizes="32x32">
 <link rel="icon" href="/assets/icons/icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
@@ -48,7 +48,7 @@
 </header>
 <main id="main" tabindex="-1">
 
-<section class="section" style="padding-top: clamp(2rem, 5vw, 4rem)">
+<section class="section section--page-top">
   <div class="wrap enquire-layout">
     <div>
       <fieldset class="toggle" id="enquiry-type">
@@ -59,8 +59,8 @@
         </div>
       </fieldset>
 
-      <div id="route-wedding" style="margin-top: var(--s-7)">
-        <div class="flow prose" style="margin-bottom: var(--s-7)">
+      <div class="space-above-lg" id="route-wedding">
+        <div class="flow prose space-below-lg">
           <h1>Tell me about your wedding.</h1>
           <p class="lede">Share the essentials about your plans and the ideas you have so far. You do not need to have every detail decided.</p>
           <p>I’ll read your enquiry and reply within three working days.</p>
@@ -224,8 +224,8 @@
 </div>
       </div>
 
-      <div id="route-other" hidden style="margin-top: var(--s-7)">
-        <div class="flow prose" style="margin-bottom: var(--s-7)">
+      <div class="space-above-lg" id="route-other" hidden>
+        <div class="flow prose space-below-lg">
           <h1>What are you planning?</h1>
           <p class="lede">Tell me a little about the occasion, where it will take place and what you have in mind.</p>
           <p>You do not need to have every detail decided. I’ll read your enquiry and come back to you to discuss what might be possible.</p>
@@ -281,7 +281,7 @@
     </div>
 
     <div class="reveal" id="o-general" hidden>
-      <div class="form" style="gap: var(--s-5)">
+      <div class="form form--roomy">
         <div class="field">
           <label for="o-date">When is it taking place? <span class="req" id="o-date-req">(required)</span></label>
           <input class="control" id="o-date" name="event_date" type="date" aria-describedby="o-date-error" data-required-unless-checked="o-date-tbc">
@@ -304,7 +304,7 @@
     </div>
 
     <div class="reveal" id="o-funeral" hidden>
-      <div class="form" style="gap: var(--s-5)">
+      <div class="form form--roomy">
         <p class="note">I’m sorry you are having to arrange this. Share whatever information you have below. You do not need to have every detail confirmed before getting in touch.</p>
         <div class="field">
   <label for="o-f-date">Date, if known</label>
@@ -404,6 +404,7 @@
             <source type="image/webp" srcset="/assets/img/enquire-wedding-quiet-500.webp 500w, /assets/img/enquire-wedding-quiet-800.webp 800w, /assets/img/enquire-wedding-quiet-1120.webp 1120w" sizes="33vw">
             <img src="/assets/img/enquire-wedding-quiet-800.jpg" srcset="/assets/img/enquire-wedding-quiet-500.jpg 500w, /assets/img/enquire-wedding-quiet-800.jpg 800w, /assets/img/enquire-wedding-quiet-1120.jpg 1120w" sizes="33vw" width="1120" height="1493" alt="" loading="lazy" decoding="async">
           </picture>
+          <figcaption class="credit">&copy; Andrew Leo</figcaption>
         </figure>
       </div>
       <div id="aside-other" hidden>
@@ -426,7 +427,7 @@
         <p>Based in Ceredigion, West Wales.</p>
         <p><a href="mailto:hello@pipfloralstudio.com">hello@pipfloralstudio.com</a></p>
         <!-- INSTAGRAM URL: placeholder host until the approved profile URL is confirmed (docs/DECISIONS.md D3) -->
-        <p><a href="https://www.instagram.com/" rel="noopener" target="_blank">Instagram<span class="visually-hidden"> (opens in a new tab)</span></a></p>
+        <p><a href="https://www.instagram.com/pipfloralstudio/" rel="noopener" target="_blank">Instagram<span class="visually-hidden"> (opens in a new tab)</span></a></p>
       </div>
       <nav aria-labelledby="footer-explore">
         <p class="footer-heading" id="footer-explore">Explore</p>
